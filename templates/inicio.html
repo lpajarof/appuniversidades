@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Listado de Universidades{% endblock %}
+{% block content %}
+<h3>Listado de Universidades</h3>
+
+<div>
+    <table  class="table table-hover">
+        <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+			  <th scope="col">Dirección</th>
+			  <th scope="col">Ubicación</th>
+            </tr>
+          </thead>
+        {% for item in universidades %}
+            <tr>
+                <td>
+                    {{ item['properties']['nombre'] }}
+                </td>                            
+                <td>
+                    {{ item['properties']['direccion'] }}
+                </td>                
+				<td>
+                    {{ item }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

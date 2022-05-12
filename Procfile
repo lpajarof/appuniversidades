@@ -1,0 +1,1 @@
+web: gunicorn AppCancer:app --log-file -
